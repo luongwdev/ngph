@@ -1,8 +1,14 @@
 package org.example.project.dto;
 
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+
+@Data
 public class EnrollmentRequest {
 
+    @NotNull(message = "studentId không được để trống")
     private Long studentId;
-    private Long courseId;
 
+    @NotNull(message = "courseId không được để trống")
+    private Long courseId;
 }
